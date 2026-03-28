@@ -14,5 +14,5 @@
 
 # Allow models folder structure only
 !models/
-!models/*/
+!models/** 
 !models/*/.gitkeep
