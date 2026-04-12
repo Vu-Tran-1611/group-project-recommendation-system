@@ -9,7 +9,8 @@ Text_Columns = ["product_name", "brand_name", "short_description", "long_descrip
 
 def build_model(df):
     df = df.copy()
-    df[Text_Columns] = df[Text_Columns].fillna("").astype(str)
+    for col in Text_Columns:
+        df[col] = df[col].astype(str).fillna("")
 
     df["text"] = (
         (df["product_name"] + " ") *3 +
