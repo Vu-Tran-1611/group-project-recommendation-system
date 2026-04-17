@@ -1,6 +1,6 @@
 from pathlib import Path
 import pandas as pd
-
+import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -8,12 +8,8 @@ df = None
 cosine_sim_matrix = None
 
 
-def load_model():
-    """
-    Loads product data, builds TF-IDF features,
-    and computes cosine similarity matrix.
-    """
-    global df, cosine_sim_matrix
+def load_model(save=False):
+    global df, cosine_sim_matrix, vectorizer, tfidf_matrix
 
     base_path = Path(__file__).resolve().parents[2]
     csv_path = base_path / "data" / "cleaned_data" / "cleaned_products.csv"
@@ -36,9 +32,14 @@ def load_model():
     )
 
     tfidf_matrix = vectorizer.fit_transform(df["combined_features"])
+
+    # ✅ SAVE FILES
+    if save:
+        joblib.dump(df, "products_df.joblib")
+        joblib.dump(tfidf_matrix, "tfidf_matrix.joblib")
+        joblib.dump(vectorizer, "tfidf_vectorizer.joblib")
+
     cosine_sim_matrix = cosine_similarity(tfidf_matrix, tfidf_matrix)
-
-
 def recommend_by_id(product_id, k=10):
     """
     Recommends similar products based on a given product ID.
@@ -99,7 +100,7 @@ def precision_at_k(product_id, k=5):
 
 if __name__ == "__main__":
     
-    load_model()
+    load_model(save=True)
     print(recommend_by_id(5, k=5))
 
 
