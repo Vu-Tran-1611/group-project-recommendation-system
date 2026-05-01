@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="1xShlhcBrnAV-gJaORF2">
+    <mxGraphModel dx="1006" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-4" edge="1" parent="1" source="hC-Z8bVqF6cIxBuJ6Ex4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hC-Z8bVqF6cIxBuJ6Ex4-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Collect User-Item Interaction" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-6" edge="1" parent="1" source="hC-Z8bVqF6cIxBuJ6Ex4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hC-Z8bVqF6cIxBuJ6Ex4-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Convert Interaction Into Scores" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-8" edge="1" parent="1" source="hC-Z8bVqF6cIxBuJ6Ex4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hC-Z8bVqF6cIxBuJ6Ex4-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-5" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Build Sparse User-Item Interaction matrix" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-10" edge="1" parent="1" source="hC-Z8bVqF6cIxBuJ6Ex4-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hC-Z8bVqF6cIxBuJ6Ex4-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-7" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Initialize Latent Factors&amp;nbsp;&lt;div&gt;(User Factor and Item Factor)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-20" edge="1" parent="1" source="hC-Z8bVqF6cIxBuJ6Ex4-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hC-Z8bVqF6cIxBuJ6Ex4-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Optimize Latent Factors by ALS Algorithm" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-22" edge="1" parent="1" source="hC-Z8bVqF6cIxBuJ6Ex4-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hC-Z8bVqF6cIxBuJ6Ex4-21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-19" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Obtaining Final Latent Factors" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="hC-Z8bVqF6cIxBuJ6Ex4-21" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Generate Recommendations" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="490" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
